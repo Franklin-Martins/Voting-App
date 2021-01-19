@@ -1,10 +1,11 @@
-# Getting Started with Create React App
+# Voting App
+voting is an idea from [App Ideas](https://github.com/florinpop17/app-ideas/blob/master/Projects/2-Intermediate/Voting-App.md).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Available Scripts 
 
 In the project directory, you can run:
+
+### `npm install`
 
 ### `npm start`
 
