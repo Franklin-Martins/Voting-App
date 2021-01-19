@@ -8,8 +8,18 @@ function Main() {
       </header>
       <body>
         <ul>
-          <li>Item para votar</li>
-          <button>Pressione para votar</button>
+          <li>
+            <h2>Item 1</h2>
+            <button>Pressione para votar</button>
+          </li>
+          <li>
+            <h2>Item 2</h2>
+            <button>Pressione para votar</button>
+          </li>
+          <li>
+            <h2>Item 3</h2>
+            <button>Pressione para votar</button>
+          </li>
         </ul>
       </body>
     </>
