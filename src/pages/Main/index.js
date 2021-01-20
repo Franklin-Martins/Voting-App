@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 
 function Main() {
+  const [voted, setVoted] = useState(false)
   const [items, setItems] = useState([{title:'item 1', votes: 0}, {title:'item 2', votes: 3}])
 
   function handleAddVote(itemVoted){
+    setVoted(true)
     setItems(
       items.map((item)=>{
         if(item.title === itemVoted){
@@ -24,8 +26,10 @@ function Main() {
           {items.map(item =>{
             return (
               <li key={item.title}>
-                <h2> {item.title} has {item.votes} votes </h2>
-                <button onClick={()=> handleAddVote(item.title)}>Pressione para votar</button>
+                <h2> {item.title} </h2>
+                {voted ? 
+                  (<button >{item.votes}</button>):
+                  (<button onClick={()=> handleAddVote(item.title)}>Pressione para votar</button>)}
               </li>
             )
           })}
