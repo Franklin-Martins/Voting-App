@@ -1,6 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 
 function Main() {
+  const [items, setItems] = useState([{title:'item 1', votes: 0}, {title:'item 2', votes: 3}])
+
+  function handleAddVote(itemVoted){
+    setItems(
+      items.map((item)=>{
+        if(item.title === itemVoted){
+          item.votes += 1;
+          return item
+        }
+        return item;
+      })
+    )
+  }
     return(
       <>
       <header>
@@ -8,18 +21,14 @@ function Main() {
       </header>
       <body>
         <ul>
-          <li>
-            <h2>Item 1</h2>
-            <button>Pressione para votar</button>
-          </li>
-          <li>
-            <h2>Item 2</h2>
-            <button>Pressione para votar</button>
-          </li>
-          <li>
-            <h2>Item 3</h2>
-            <button>Pressione para votar</button>
-          </li>
+          {items.map(item =>{
+            return (
+              <li key={item.title}>
+                <h2> {item.title} has {item.votes} votes </h2>
+                <button onClick={()=> handleAddVote(item.title)}>Pressione para votar</button>
+              </li>
+            )
+          })}
         </ul>
       </body>
     </>
