@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+import './style.css'
+
 function Main() {
   const [voted, setVoted] = useState(false)
   const [items, setItems] = useState([{title:'item 1', votes: 0}, {title:'item 2', votes: 3}])
