@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+li{
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+button{
+    color: aliceblue;
+    background-color: rgb(134, 6, 6);
+    cursor: pointer;
+    width: 90px;
+    border: 1px solid rgb(56, 2, 2);
+    border-radius: 10px;
+}
